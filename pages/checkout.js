@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+
 import {
   Box,
   Button,
@@ -12,16 +12,11 @@ import {
   ListItem,
   MenuItem,
   Select,
-  Slide,
+
   Step,
   StepLabel,
   Stepper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
+
   TextField,
   Typography,
 } from '@material-ui/core';
@@ -35,7 +30,6 @@ import { Store } from '../components/Store';
 import { CART_RETRIEVE_SUCCESS, ORDER_SET } from '../utils/constants';
 import Router from 'next/router';
 
-const dev = process.env.NODE_ENV === 'development';
 function Checkout(props) {
   const classes = useStyles();
   const { state, dispatch } = useContext(Store);
@@ -61,31 +55,31 @@ function Checkout(props) {
   };
 
   // Customer details
-  const [firstName, setFirstName] = useState(dev ? 'Jane' : '');
-  const [lastName, setLastName] = useState(dev ? 'Doe' : '');
-  const [email, setEmail] = useState(dev ? 'janedoe@email.com' : '');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
 
   // Shipping details
-  const [shippingName, setShippingName] = useState(dev ? 'Jane Doe' : '');
+  const [shippingName, setShippingName] = useState('');
   const [shippingStreet, setShippingStreet] = useState(
-    dev ? '123 Fake St' : ''
+''
   );
   const [shippingPostalZipCode, setShippingPostalZipCode] = useState(
-    dev ? '90089' : ''
+''
   );
-  const [shippingCity, setShippingCity] = useState(dev ? 'Los Angeles' : '');
+  const [shippingCity, setShippingCity] = useState('');
   const [shippingStateProvince, setShippingStateProvince] = useState(
-    dev ? 'AR' : ''
+''
   );
-  const [shippingCountry, setShippingCountry] = useState(dev ? 'GB' : '');
+  const [shippingCountry, setShippingCountry] = useState('');
   const [shippingOption, setShippingOption] = useState({});
   // Payment details
-  const [cardNum, setCardNum] = useState(dev ? '4242 4242 4242 4242' : '');
-  const [expMonth, setExpMonth] = useState(dev ? '11' : '');
-  const [expYear, setExpYear] = useState(dev ? '2023' : '');
-  const [cvv, setCvv] = useState(dev ? '123' : '');
+  const [cardNum, setCardNum] = useState('');
+  const [expMonth, setExpMonth] = useState('');
+  const [expYear, setExpYear] = useState('');
+  const [cvv, setCvv] = useState('');
   const [billingPostalZipcode, setBillingPostalZipcode] = useState(
-    dev ? '90089' : ''
+''
   );
   // Shipping and fulfillment data
   const [shippingCountries, setShippingCountries] = useState({});

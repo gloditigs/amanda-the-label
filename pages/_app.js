@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/globals.css";
 import { StoreProvider } from "../components/Store";
 import NProgress from "nprogress";
@@ -27,10 +28,4 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 
-MyApp.getInitialProps = async () => {
-  return {
-    pageProps: {
-      commercePublicKey: process.env.COMMERCE_PUBLIC_KEY,
-    },
-  };
-};
+
