@@ -12,9 +12,10 @@
     "@chec/commerce.js": "^2.7.2",
     "@material-ui/core": "^4.12.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
+    "jsx": "^0.9.89",
     "next": "11.0.1",
     "nprogress": "^0.2.0",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
